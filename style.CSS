@@ -1,0 +1,27 @@
+/* Custom CSS for font and smooth scrolling */
+body {
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth; /* Enable smooth scrolling for anchor links */
+}
+/* Custom active link styling (Tailwind doesn't have a direct 'active' class for this) */
+.nav-link.active {
+    /* These are Tailwind classes, so they would still rely on Tailwind being loaded */
+    color: #2563eb; /* text-blue-600 */
+    border-bottom-width: 2px; /* border-b-2 */
+    border-color: #2563eb; /* border-blue-600 */
+}
+/* Custom scrollbar for better aesthetics */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
