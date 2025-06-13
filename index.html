@@ -4,38 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mohammed Jafaruddin - Aspiring Software Developer Portfolio</title>
-    <!-- Load Tailwind CSS from CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Inter font from Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Font Awesome for icons (e.g., social media) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        /* Custom CSS for font and smooth scrolling */
+        /* Basic CSS for font and animations */
         body {
             font-family: 'Inter', sans-serif;
-            scroll-behavior: smooth; /* Enable smooth scrolling for anchor links */
         }
-        /* Custom active link styling (Tailwind doesn't have a direct 'active' class for this) */
-        .nav-link.active {
-            @apply text-blue-600 border-b-2 border-blue-600;
-        }
-        /* Custom scrollbar for better aesthetics */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #f1f1f1;
-            border-radius: 10px;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #888;
-            border-radius: 10px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #555;
-        }
-        @keyframes fade-in-up {
+        @keyframes fadeInMoveUp {
             from {
                 opacity: 0;
                 transform: translateY(20px);
@@ -46,34 +23,33 @@
             }
         }
         .animate-fade-in-up {
-            animation: fade-in-up 0.8s ease-out forwards;
+            animation: fadeInMoveUp 0.6s ease-out forwards;
         }
-        .animation-delay-200 { animation-delay: 0.2s; }
-        .animation-delay-400 { animation-delay: 0.4s; }
+        .animation-delay-200 {
+            animation-delay: 0.2s;
+        }
+        .animation-delay-400 {
+            animation-delay: 0.4s;
+        }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
 
-    <!-- Header & Navigation Bar -->
     <header class="bg-white/80 backdrop-blur-md shadow-sm py-4 sticky top-0 z-50 transition-all duration-300">
         <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
-            <!-- Logo/Your Name -->
             <a href="#" class="text-2xl font-bold text-gray-900 rounded-md p-2 hover:bg-gray-100 transition-colors">Mohammed Jafaruddin</a>
-            <!-- Navigation Links -->
             <ul class="hidden md:flex items-center space-x-8">
                 <li><a href="#about" class="nav-link text-gray-600 hover:text-blue-600 font-medium px-3 py-2 rounded-md transition-colors">About</a></li>
                 <li><a href="#projects" class="nav-link text-gray-600 hover:text-blue-600 font-medium px-3 py-2 rounded-md transition-colors">Projects</a></li>
                 <li><a href="#contact" class="nav-link text-gray-600 hover:text-blue-600 font-medium px-3 py-2 rounded-md transition-colors">Contact</a></li>
                 <li>
-                    <!-- Resume Button -->
                     <a href="Resume.png" target="_blank" class="bg-blue-600 text-white px-5 py-2.5 rounded-full shadow-lg hover:bg-blue-700 transition-all duration-300 ease-in-out transform hover:scale-105">
                         My Resume
                     </a>
                 </li>
             </ul>
             <button id="mobile-menu-button" class="md:hidden p-2 rounded-md text-gray-600 hover:bg-gray-100 focus:outline-none">
-                <i class="fas fa-bars text-2xl"></i>
-            </button>
+                <i class="fas fa-bars text-2xl"></i> </button>
         </nav>
         <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
              <a href="#about" class="block text-center py-3 px-4 text-gray-600 hover:bg-gray-100">About</a>
@@ -110,11 +86,11 @@
                 </div>
                 <div class="flex flex-col md:flex-row items-center gap-12 md:gap-16">
                     <div class="md:w-1/3 flex justify-center">
-                        <img src="image.jpg" alt="Profile Picture of Mohammed Jafaruddin" class="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover shadow-xl border-4 border-gray-200 transform transition-transform duration-500 hover:scale-105">
+                        <img src="image.jpg" alt="Profile Picture of Afeera Tabassum" class="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover shadow-xl border-4 border-gray-200 transform transition-transform duration-500 hover:scale-105">
                     </div>
                     <div class="md:w-2/3 text-left">
                         <p class="text-lg text-gray-700 leading-relaxed mb-6">
-                            Hello! I'm <span class="font-semibold">Mohammed Jafaruddin</span>, a recent graduate with a degree in Computer Science and a strong foundation in software development principles. My fascination with technology isn't just academic; it's a genuine passion for creating software that solves real-world problems and improves user experiences.
+                            Hello! I'm <span class="font-semibold">Mohammed Jafaruddin</span>, a recent graduate with a degree in Computer Science and Engineering, and a strong foundation in software development principles. My fascination with technology isn't just academic; it's a genuine passion for creating software that solves real-world problems and improves user experiences.
                         </p>
                         <p class="text-lg text-gray-700 leading-relaxed mb-8">
                             I am a quick learner and thrive in collaborative environments where I can both contribute my skills and absorb knowledge from experienced peers. My academic projects have provided me with hands-on experience in the full development lifecycle, from ideation to deployment. I am now eager to apply my skills to professional projects and grow as a developer.
@@ -122,14 +98,14 @@
                         <div class="bg-gray-50 p-6 rounded-xl border border-gray-200">
                              <h3 class="text-2xl font-semibold text-gray-800 mb-5">Core Skills & Technologies</h3>
                              <div class="flex flex-wrap gap-3">
-                                <span class="bg-blue-100 text-blue-800 text-base font-medium px-4 py-2 rounded-full shadow-sm">Python</span>
-                                <span class="bg-blue-100 text-blue-800 text-base font-medium px-4 py-2 rounded-full shadow-sm">c</span>
-                                <span class="bg-blue-100 text-blue-800 text-base font-medium px-4 py-2 rounded-full shadow-sm">HTML5 & CSS3</span>
-                                <span class="bg-blue-100 text-blue-800 text-base font-medium px-4 py-2 rounded-full shadow-sm">JavaScript</span>
-                                <span class="bg-blue-100 text-blue-800 text-base font-medium px-4 py-2 rounded-full shadow-sm">c++</span>
-                                <span class="bg-blue-100 text-blue-800 text-base font-medium px-4 py-2 rounded-full shadow-sm">Data Analysis</span>
-                                <span class="bg-blue-100 text-blue-800 text-base font-medium px-4 py-2 rounded-full shadow-sm">Git & GitHub</span>
-                                <span class="bg-blue-100 text-blue-800 text-base font-medium px-4 py-2 rounded-full shadow-sm">Data Structures</span>
+                                 <span class="bg-blue-100 text-blue-800 text-base font-medium px-4 py-2 rounded-full shadow-sm">Python</span>
+                                 <span class="bg-blue-100 text-blue-800 text-base font-medium px-4 py-2 rounded-full shadow-sm">C</span>
+                                 <span class="bg-blue-100 text-blue-800 text-base font-medium px-4 py-2 rounded-full shadow-sm">HTML5 & CSS3</span>
+                                 <span class="bg-blue-100 text-blue-800 text-base font-medium px-4 py-2 rounded-full shadow-sm">JavaScript</span>
+                                 <span class="bg-blue-100 text-blue-800 text-base font-medium px-4 py-2 rounded-full shadow-sm">C++</span>
+                                 <span class="bg-blue-100 text-blue-800 text-base font-medium px-4 py-2 rounded-full shadow-sm">Data Analysis</span>
+                                 <span class="bg-blue-100 text-blue-800 text-base font-medium px-4 py-2 rounded-full shadow-sm">Git & GitHub</span>
+                                 <span class="bg-blue-100 text-blue-800 text-base font-medium px-4 py-2 rounded-full shadow-sm">Data Structures</span>
                              </div>
                         </div>
                     </div>
@@ -145,7 +121,6 @@
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
 
-                    <!-- Project Card 1: Spotify Clone -->
                     <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden transform hover:-translate-y-2 flex flex-col">
                         <img src="https://placehold.co/600x400/1DB954/FFFFFF?text=Spotify+Clone" alt="Spotify Clone Screenshot" class="w-full h-56 object-cover border-b border-gray-200">
                         <div class="p-6 text-left flex flex-col flex-grow">
@@ -162,42 +137,43 @@
                                 <span class="bg-green-100 text-green-800 text-xs font-semibold px-3 py-1 rounded-full">JavaScript</span>
                             </div>
                             <div class="flex justify-start space-x-4 mt-auto">
-                                <a href="#" onclick="event.preventDefault(); alert('Please replace this with your actual Live Demo URL!');" class="bg-blue-600 text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-blue-700 transition-colors flex items-center">
+                                <a href="#" onclick="event.preventDefault(); alert('Live demo coming soon!');" class="bg-blue-600 text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-blue-700 transition-colors flex items-center">
                                     <i class="fas fa-external-link-alt mr-2"></i> Live Demo
                                 </a>
-                                <a href="https://github.com/jaffu123/Spotify-Clone" target="_blank" class="bg-gray-200 text-gray-800 px-5 py-2 rounded-full text-sm font-medium hover:bg-gray-300 transition-colors flex items-center">
+                                <a href="https://github.com/jaffu123/Spotify-Clone.git" target="_blank" class="bg-gray-200 text-gray-800 px-5 py-2 rounded-full text-sm font-medium hover:bg-gray-300 transition-colors flex items-center">
                                     <i class="fab fa-github mr-2"></i> View Code
                                 </a>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Project Card 2: Airfare Price Prediction -->
                     <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden transform hover:-translate-y-2 flex flex-col">
-                        <img src="https://placehold.co/600x400/FF5733/FFFFFF?text=Airfare+Prediction" alt="Airfare Price Prediction Screenshot" class="w-full h-56 object-cover border-b border-gray-200">
+                        <!-- Calculator SVG icon -->
+                        <div class="w-full h-56 bg-gradient-to-br from-gray-700 to-gray-900 flex items-center justify-center border-b border-gray-200">
+                           <svg class="w-32 h-32 text-white" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM6 7h12v2H6V7zm4 4h4v2h-4v-2zm-4 0h2v2H6v-2zm8 0h2v2h-2v-2zm-8 4h2v2H6v-2zm4 0h4v2h-4v-2zm4 0h2v2h-2v-2z"/>
+                            </svg>
+                        </div>
                         <div class="p-6 text-left flex flex-col flex-grow">
-                            <h3 class="text-2xl font-bold text-gray-900 mb-3">A Holistic Approach on Airfare Price Prediction using Machine learning Technique</h3>
+                            <h3 class="text-2xl font-bold text-gray-900 mb-3">Calculator</h3>
                             <p class="text-gray-700 mb-4 leading-relaxed flex-grow">
-                                This project explores various machine learning techniques to predict airfare prices, analyzing historical data and factors like seasonality, demand, and route popularity to provide accurate forecasts. It demonstrates my skills in data analysis, model selection, and predictive modeling.
+                                This web-based calculator beautifully blends HTML, CSS, and JavaScript to deliver a sleek, modern, and highly functional user experience. Its intuitive design features a dark theme, clear button distinctions, and subtle interactive effects, making it a joy to use for core arithmetic and common percentage/sign change operations. It's a prime example of how these front-end technologies collaborate to create aesthetically pleasing and interactive web applications.
                             </p>
                             <div class="flex flex-wrap gap-2 mb-6">
-                                <span class="bg-green-100 text-green-800 text-xs font-semibold px-3 py-1 rounded-full">Python</span>
-                                <span class="bg-green-100 text-green-800 text-xs font-semibold px-3 py-1 rounded-full">Machine Learning</span>
-                                <span class="bg-green-100 text-green-800 text-xs font-semibold px-3 py-1 rounded-full">Data Analysis</span>
-                                <span class="bg-green-100 text-green-800 text-xs font-semibold px-3 py-1 rounded-full">Scikit-learn</span>
+                                <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-3 py-1 rounded-full">HTML</span>
+                                <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-3 py-1 rounded-full">CSS</span>
+                                <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-3 py-1 rounded-full">JavaScript</span>
                             </div>
                             <div class="flex justify-start space-x-4 mt-auto">
-                                <a href="#" onclick="event.preventDefault(); alert('Please replace this with your actual Live Demo URL!');" class="bg-blue-600 text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-blue-700 transition-colors flex items-center">
+                                <a href="#" onclick="event.preventDefault(); alert('Live demo coming soon!');" class="bg-blue-600 text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-blue-700 transition-colors flex items-center">
                                     <i class="fas fa-external-link-alt mr-2"></i> Live Demo
                                 </a>
-                                <a href="#" onclick="event.preventDefault(); alert('Please replace this with your actual GitHub Repo URL!');" class="bg-gray-200 text-gray-800 px-5 py-2 rounded-full text-sm font-medium hover:bg-gray-300 transition-colors flex items-center">
+                                <a href="https://github.com/jaffu123/Calculator-b.git" target="_blank" class="bg-gray-200 text-gray-800 px-5 py-2 rounded-full text-sm font-medium hover:bg-gray-300 transition-colors flex items-center">
                                     <i class="fab fa-github mr-2"></i> View Code
                                 </a>
                             </div>
                         </div>
                     </div>
-
-                    <!-- Project Card 3 (removed as per request) -->
 
                 </div>
             </div>
@@ -232,56 +208,41 @@
     </footer>
 
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const sections = document.querySelectorAll('section[id]');
-            const navLinks = document.querySelectorAll('.nav-link');
-            const mobileMenuButton = document.getElementById('mobile-menu-button');
-            const mobileMenu = document.getElementById('mobile-menu');
-
-            mobileMenuButton.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-            });
-            
-            document.querySelectorAll('#mobile-menu a').forEach(link => {
-                link.addEventListener('click', () => {
-                    mobileMenu.classList.add('hidden');
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
                 });
             });
+        });
 
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    const href = this.getAttribute('href');
-                    if (href === '#') {
-                        e.preventDefault();
-                        window.scrollTo({ top: 0, behavior: 'smooth' });
-                        return;
-                    }
-                    if (href.length > 1 && document.querySelector(href)) {
-                        e.preventDefault();
-                        document.querySelector(href).scrollIntoView({
-                            behavior: 'smooth'
-                        });
-                    }
-                });
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
             });
+        });
 
-            const highlightNavLink = () => {
-                let current = '';
-                sections.forEach(section => {
-                    const sectionTop = section.offsetTop;
-                    if (window.scrollY >= sectionTop - 100) {
-                        current = section.getAttribute('id');
-                    }
-                });
-                navLinks.forEach(link => {
-                    link.classList.remove('active');
-                    if (link.getAttribute('href').includes(current)) {
-                        link.classList.add('active');
-                    }
-                });
-            };
-            window.addEventListener('scroll', highlightNavLink);
-            highlightNavLink();
+        // Add sticky header effect
+        const header = document.querySelector('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('bg-white', 'shadow-md');
+                header.classList.remove('bg-white/80', 'backdrop-blur-md', 'shadow-sm');
+            } else {
+                header.classList.remove('bg-white', 'shadow-md');
+                header.classList.add('bg-white/80', 'backdrop-blur-md', 'shadow-sm');
+            }
         });
     </script>
 </body>
